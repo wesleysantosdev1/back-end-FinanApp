@@ -6,10 +6,13 @@ interface ReceiveRequest {
   type: string;
   date: string;
   user_id: string;
+  image?: string;
+  signature?: string;
+  category: string;
 }
 
 class CreateReceiveService{
-  async execute({ description, type, value, date, user_id }: ReceiveRequest){
+  async execute({ description, type, value, date, user_id, image, signature, category, }: ReceiveRequest){
 
     if (!user_id) {
       throw new Error("Invalid user");
@@ -51,6 +54,9 @@ class CreateReceiveService{
         value,
         date,
         user_id,
+        image,
+        signature,
+        category,
       }
     })
 
