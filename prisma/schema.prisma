@@ -30,6 +30,8 @@ model Receive {
   type        String
   date        String
   image       String?
+  signature   String?
+  category    String    @default("Outros")
   created_at  DateTime? @default(now())
   updated_at  DateTime? @default(now())
   user_id     String

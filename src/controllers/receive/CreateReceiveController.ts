@@ -8,7 +8,9 @@ class CreateReceiveController{
       value,
       type,
       date, 
-      image
+      image,
+      signature,
+      category
      } = request.body;
 
      const user_id = request.user_id;
@@ -21,7 +23,9 @@ class CreateReceiveController{
       type,
       date,
       user_id,
-      image
+      image, 
+      signature,
+      category
     })
 
     return response.json(user);
